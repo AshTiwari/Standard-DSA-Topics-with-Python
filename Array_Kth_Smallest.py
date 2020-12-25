@@ -35,6 +35,9 @@ def linkedListMethod(array,k):
 def quickSearchMethod(array,k):
 	return KthSmallest(array,0,len(array)-1,k)
 
+def maxHeapMethod(array,k):
+	pass
+
 if __name__ == "__main__":
 	array = [3,52,66,64,28,9,44,70,72,1,0]
 	for i in range(10):
