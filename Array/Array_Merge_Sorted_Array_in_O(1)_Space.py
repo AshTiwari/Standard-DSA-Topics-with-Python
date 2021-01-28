@@ -1,19 +1,23 @@
 # Merge two sorted array in O(1) time.
 
+from binaryInsertion import binaryInsertion
+######### COMPLETE THE CODE BY USING binaryInsertion FUNCTION TO ADD ELEMENT IN SORTED arr2 ###########
+
+def addElement(arr,element):
+	index = 0
+	while(index < len(arr)-1):
+		if arr[index] > arr[index+1]:
+			arr[index], arr[index+1] = arr[index+1], arr[index]
+		index += 1
+
 def swapAndSort(arr1,arr2):
 	index1 = 0
 	index2 = 0
-	while(index1 < len(arr1)): # and index2 < len(arr2)):
+	while(index1 < len(arr1)): 
 		if arr1[index1] > arr2[index2]:
 			arr1[index1], arr2[index2] = arr2[index2], arr1[index1]	
 			temp_index2 = index2
-			while(temp_index2 < len(arr2)-1):
-				if arr2[temp_index2] > arr2[temp_index2+1]:
-					  arr2[temp_index2], arr2[temp_index2+1] = arr2[temp_index2+1], arr2[temp_index2]
-				temp_index2 += 1
-			
-		#if arr1[index1] < arr2[index2]:
-			#pass
+		addElement(arr2,arr1[index1])
 		index1 += 1
 
 if __name__ == "__main__":
