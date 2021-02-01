@@ -1,4 +1,5 @@
 # Find commmon elements in three sorted arrays.
+#################### Enhance the code by replacing while loop with binarySearch. #####################
 
 def threePointer(a,ar,arr):
 	a_index = ar_index = arr_index = 0
