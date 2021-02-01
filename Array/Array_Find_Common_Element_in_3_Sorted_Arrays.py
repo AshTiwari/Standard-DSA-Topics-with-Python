@@ -5,12 +5,15 @@ def threePointer(a,ar,arr):
 	duplicate = []
 	while(a_index < len(a) and ar_index < len(ar) and arr_index < len(arr)):
 		maxElement = max(a[a_index],ar[ar_index],arr[arr_index])
+
+		# replace below while loops by using binarySearch.
 		while(a_index < len(a) and a[a_index] < maxElement ):
 			a_index += 1
 		while(ar_index < len(ar) and ar[ar_index] < maxElement ):
 			ar_index += 1
 		while(arr_index < len(arr) and arr[arr_index] < maxElement):
 			arr_index += 1
+
 		if not (a_index < len(a) and ar_index < len(ar) and arr_index < len(arr)):
 			break
 		if a[a_index] == ar[ar_index] == arr[arr_index]:
