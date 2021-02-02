@@ -1,10 +1,12 @@
 # Merge two sorted array in O(1) time.
 
 from binaryInsertion import binaryInsertion
-######### COMPLETE THE CODE BY USING binaryInsertion FUNCTION TO ADD ELEMENT IN SORTED arr2 ###########
+######### Increase the Efficiency by using binaryInsertion function to add element in sorted arr2 ###########
 
 def addElement(arr,element):
 	index = 0
+	
+	# alternate way is to use binaryInsertion.
 	while(index < len(arr)-1):
 		if arr[index] > arr[index+1]:
 			arr[index], arr[index+1] = arr[index+1], arr[index]
