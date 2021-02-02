@@ -1,5 +1,5 @@
 # Find commmon elements in three sorted arrays.
-#################### Enhance the code by replacing while loop with binarySearch. #####################
+#################### Increase the efficiency by replacing while loop with binarySearch. #####################
 
 def threePointer(a,ar,arr):
 	a_index = ar_index = arr_index = 0
@@ -7,7 +7,7 @@ def threePointer(a,ar,arr):
 	while(a_index < len(a) and ar_index < len(ar) and arr_index < len(arr)):
 		maxElement = max(a[a_index],ar[ar_index],arr[arr_index])
 
-		# replace below while loops by using binarySearch.
+		# alternate solution for while loops is using binarySearch.
 		while(a_index < len(a) and a[a_index] < maxElement ):
 			a_index += 1
 		while(ar_index < len(ar) and ar[ar_index] < maxElement ):
